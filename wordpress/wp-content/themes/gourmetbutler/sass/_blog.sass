@@ -1,0 +1,387 @@
+#pag-blog
+	.linha
+		height: 2px
+		border: 1px solid $rosa
+		position: relative
+		width: 100%
+		margin: 80px 0px 50px 0px
+
+		h1
+			position: absolute
+			font-size: 50px
+			color: $rosa
+			font-family: $roboto
+			top: -36px
+			background: white 
+			padding: 5px
+			left: 50%
+			margin-left: -260px
+
+	
+	.roll, .single, .search, #autores
+		width: 660px
+		float: left
+
+	.paginacao
+		text-align: center
+		position: relative
+
+		.page-numbers
+			margin: 10px
+			padding: 5px
+			background: white
+			+transition(0.3s ease-out)
+
+			&:hover
+				background: rgba(113, 113, 113, 0.13)
+		.prev, .next
+			background: $cinza
+			color: white
+			padding: 10px
+			display: block
+			font-family: $roboto
+			cursor: pointer
+			+transition(0.3s ease-out)
+			text-align: center
+			display: inline-block
+
+			&:hover
+				background: $rosa
+
+		
+
+
+	article
+		border-bottom: 3px solid lighten($cinza, 30%)
+		margin-bottom: 30px
+		.image
+			position: relative
+
+			.data
+				background: $rosa
+				padding: 10px
+				color: white
+				font-family: $roboto
+				position: absolute
+				right: 10px
+				font-weight: 600
+				top: 10px
+				font-size: 25px
+
+		h2
+			font-size: 30px
+			font-weight: 600
+			color: $rosa
+			font-family: $roboto
+			margin: 10px 0px
+
+		.categorias
+			width: 65%
+			float: left
+			margin: 20px 0px
+
+			.categoria
+				background: #d9d9d9
+				padding: 5px
+				font-family: $roboto
+				font-size: 15px
+				font-weight: 600
+				+transition(0.3s ease-out)
+
+				&:hover
+					background: $rosa
+					color: white
+
+		.autor
+			width: 30% 
+			float: right
+			font-family: $roboto
+			font-size: 14px
+			color: lighten($cinza,20%)
+			text-align: right
+			padding-right: 5px
+			margin: 15px 0px
+
+		p
+			font-size: 16px
+			color: #585858
+			line-height: 1.4
+
+		.tags
+			margin: 10px 0px
+			p
+				font-family: $roboto
+				font-size: 14px
+				span
+					color: $rosa
+					font-weight: 600
+
+				a:hover
+					font-weight: 600
+
+
+		.leiaMais
+			background: $rosa
+			display: block
+			padding: 10px 20px
+			font-family: $roboto
+			color: white
+			font-size: 14px
+			float: right
+			margin-right: 10px
+			+transition(0.3s ease-out)
+			margin-bottom: 30px
+
+			&:hover
+				background: $cinza
+
+	aside
+		width: 240px
+		float: right
+
+		.busca
+			margin: 10px 0px
+			input
+				background-color: $cinza
+				float: left
+				margin: 0 
+				border: none
+				height: 40px
+				color: white
+
+				&:focus
+					outline: none
+
+			input[type="text"]
+				width: 200px
+				font-size: 14px
+
+			input[type="submit"]
+				background: url('../images/lupa.png') no-repeat $cinza 10px 10px
+				width: 40px
+
+		.video
+			#side-img
+				width: 240px
+				height: 140px
+				position: relative
+				margin: 10px 0px
+				&:hover
+					img
+						bottom: 42px
+
+				img
+					@include transition(0.3s)
+					position: absolute
+					bottom: 0
+
+				.overlay
+					position: absolute
+					top: 9px
+					bottom: 0
+					right: 0
+					left: 0
+					background: url(../images/sideimg-hov.png)
+
+			img
+				width: 100%
+
+		h3
+			color: $rosa
+			font-weight: 600
+			font-family: $roboto
+			margin: 15px 0px
+			font-size: 18px
+
+		p
+			color: lighten($cinza, 5%)
+			line-height: 1.2
+
+		.news, .rss
+			margin-top: 30px
+
+			h3
+				font-weight: 300
+				font-size: 25px
+
+			input[type="email"]
+				width: 200px
+				float: left
+				height: 50px
+				display: block
+				background: white
+				border: 2px solid $cinza
+				font-size: 15px
+				font-family: $roboto
+				padding-left: 5px 
+				border-right: none
+
+				&:focus
+					outline: none
+
+
+			input[type="submit"]
+				float right
+				width: 30px
+				height: 50px
+				display: block
+				border: none
+				color: white
+				font-weight: 600
+				font-family: $roboto
+				font-size: 30px
+				line-height: 20px
+				background: url('../images/submit-seta.png') no-repeat $cinza 7px 12px
+				+transition(0.3s ease-out)
+				cursor: pointer
+
+
+				&:focus
+					outline: none
+
+				&:hover
+					background-color: $rosa
+
+		.rss
+			a
+				padding: 10px
+				display: block
+
+				&:hover
+					background: #eee
+			#iconRss
+				float: left
+				margin-right: 20px
+				margin-top: 10px
+
+			p
+				display: block
+				float: right
+				width: 150px
+
+		.maisLidos, .categorias, .autores, .tags
+			border: 2px solid lighten($cinza,30%)
+			margin: 30px 0px
+			padding: 20px 10px
+			position: relative
+
+			h3
+				padding: 5px
+				background: white
+				position: absolute
+				top: -30px
+
+		.maisLidos
+			a:hover
+				li
+					background: #eee
+			li
+				padding: 5px
+				+transition(0.3s ease-out)
+
+				.num
+					float: left 
+					font-size: 45px
+					color: $rosa
+					font-family: $roboto
+					margin: 10px 5px
+					font-weight: 600
+
+				p
+					float: right
+					width: 160px
+					font-weight: 300
+					margin: 15px 0px
+					font-size: 14px
+
+		.categorias, .autores
+			li:before
+				content: "• "
+				color: $rosa
+
+			li
+				margin: 5px 0px
+				padding: 5px
+				
+
+				a:hover
+					margin-left: 5px
+			a
+				font-size: 15px
+				+transition(0.3s ease-out)
+
+	.single
+
+		article
+			border-bottom: none
+
+		.relacionados
+			border-top: 3px solid lighten($cinza, 30%)
+			margin: 30px 0px
+			ul
+				margin-top: 30px
+
+				a
+					&:hover
+						li
+							background: rgba(0,0,0,0.1)
+				
+				li
+					float: left
+					width: 177px
+					margin: 0px 20px
+					text-align: center
+					padding: 5px 10px
+				
+					text-align: center
+
+					img
+						background: #eee
+						width: 137px
+
+					h3
+						font-weight: 600
+						font-family: $roboto
+						font-size: 20px
+						margin: 5px 0px
+						text-align: left
+
+					p
+						font-size: 14px
+						text-align: left
+		.social
+			float: right
+
+		.comentarios
+			border-top: 3px solid lighten($cinza, 30%)
+			margin: 50px 0px
+
+	.search, #autores
+
+		.descricao
+			color: #595959
+			margin-bottom: 30px
+
+		.cargo
+			margin: 10px 0px
+			font-weight: 600
+			font-family: $roboto
+			color: lighten($cinza, 10%)
+		h3
+			font-family: $roboto
+			font-size: 30px
+			color: $rosa
+			font-weight: 400
+			margin: 20px 0px
+			margin-bottom: 40px
+
+			span
+				font-weight: 600
+		article
+			margin: 20px 0px
+			h2
+				font-size: 22px
+
+	.nuvemTags
+		a:hover
+			color: $rosa

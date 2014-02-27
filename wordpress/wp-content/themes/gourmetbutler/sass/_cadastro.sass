@@ -1,0 +1,520 @@
+#pag-cadastro
+	
+	.titulo
+		position: relative
+		border-bottom: 2px solid $rosa
+		padding: 5px 0px
+		margin-bottom: 40px
+
+		#voltar
+			background: url('../images/voltarCadastro.png') no-repeat left 
+			color: $rosa
+			padding-left: 35px
+			font-family: $roboto
+			font-size: 20px
+			position: absolute
+			bottom: -30px
+			right: 0
+			+transition(0.3s ease-out)
+			cursor: pointer
+			display: none
+
+			&:hover
+				padding-left: 45px
+
+		.titulos
+			float: left
+			width: 510px
+
+		.passos
+			float: right
+			margin-top: 20px
+			li
+				float: left
+				width: 100px
+				text-align: center
+				font-size: 15px
+
+
+				.num
+					font-family: $roboto
+					font-size: 24px
+
+				&.active
+					color: $rosa
+					.num
+						color: $rosa
+		
+		h1
+			color: $rosa
+			font-size: 30px
+			font-weight: 300
+			font-family: $roboto
+			margin: 15px 20px
+
+		h2
+			font-size: 16px
+			color: $cinza
+			margin: 5px 20px
+
+	.etapa
+		padding-bottom: 30px 
+
+		.oquee
+			color: #666
+			font-size: 14px
+			cursor: pointer
+			&:hover
+				color: $rosa
+
+		.disponibilidade
+			display: none
+			margin: 5px 0px
+
+			&.nao
+				color: #FF9090
+			&.sim
+				color: #7FB46A
+
+		.disponibilidadeEmail
+			display: none
+			margin: 5px 0px
+
+			&.nao
+				color: #FF9090 !important
+			&.sim
+				color: #7FB46A !important
+
+		.compatibilidade
+			display: none
+			margin: 5px 0px
+			&.nao
+				color: #FF9090
+			&.sim
+				color: #7FB46A
+
+		.erro
+			color: #FF9090
+			font-family: $roboto
+			font-size: 16px
+			margin: 10px 0px
+
+	
+			
+		.container 
+			padding: 10px 20px
+		h2
+			margin: 25px 0
+			color: $rosa 
+			font-family: $roboto
+			font-weight: 600
+			font-size: 25px
+
+		.divESQ
+			float: left
+			width: 290px
+
+		.divDIR
+			float: left
+			width: 370px
+
+			select
+				display: block
+				width: 90px
+				height: 40px
+				-webkit-appearance: none
+				+border-radius(0)
+				border: 2px solid lighten($cinza, 20%)
+				background: url('../images/select.png') right no-repeat
+				padding-right: 20px
+				padding-left: 5px
+				font-size: 15px
+				color: #868686
+				margin: 10px 0px
+
+				&:focus
+					outline: none
+
+			#campoEmail
+				width: 350px
+
+			.relative
+				color: $cinza
+				margin-bottom: 6px
+				label
+					display: block
+					font-family: $roboto
+					margin: 10px 0px
+					color: $cinza
+
+				input
+					margin-left: 15px
+
+		input[type="text"], input[type="password"], input[type="email"]
+			width: 230px
+			height: 40px
+			margin: 10px 0px
+			border: 2px solid lighten($cinza, 20%)
+			padding: 5px
+			font-size: 15px
+			color: #595959
+
+			&:focus
+				outline: none
+				border: 2px solid lighten($rosa, 20%)
+
+			&.error
+				border: 2px solid #FF9090
+			&.valid
+				border: 2px solid #7FB46A
+
+			&:disabled
+				background: #eee
+				color: #595959
+
+		.alerta 
+			background: $rosa
+			padding: 10px
+			color: white
+			float: left
+			margin: 25px 0px
+
+		input[type="submit"]
+			background: $cinza
+			color: white
+			border: 2px solid $cinza
+			padding: 5px 20px
+			font-size: 18px
+			font-family: $roboto
+			font-weight: 600
+			float: right
+			margin-right: 50px
+			cursor: pointer
+			+transition(0.3s ease-out)
+
+			&:hover
+				background: transparent 
+				color: $cinza
+
+
+
+
+
+	
+	#passoDOIS
+		display: none 
+	#passoTRES
+		display: none
+
+
+		.campos
+			.cupomDesconto
+				float: left
+				width: 50%
+
+				label
+					color: $cinza
+					font-size: 20px
+					font-family: $roboto
+					margin: 0 10px
+
+			.calculo
+				width: 50%
+				float: right
+				padding-right: 25px
+				padding-top: 10px
+
+				label
+					font-size: 20px
+					color: $cinza
+					font-family: $roboto
+					float: right
+					display: block
+					line-height: 35px
+					margin-right: 10px
+
+					&.labelSub
+						color: $rosa
+						font-size: 25px
+
+				.frete
+					background: #d9d9d9
+					width: 200px
+					height: 35px
+					float: right
+					margin-bottom: 10px
+
+				.subtotal
+					background: #d9d9d9
+					width: 200px
+					height: 35px
+					float: right
+
+			#atualizarValor
+				
+				padding-left: 5px
+				display: block 
+				float: right
+				cursor: pointer
+				width: 150px
+				color: $cinza
+				margin: 10px 0px
+
+				span
+					background: url('../images/atualizar.png')
+					display: block
+					width: 19px
+					height: 14px
+					float: left
+					margin-right: 10px
+					+transition(transform, 0.8s)
+
+				&:hover
+					span
+						+transform(rotate(720deg))
+			
+			
+
+
+				
+
+		
+		li
+			width: 33%
+			padding: 5px 10px
+			float: left
+
+			&:hover
+				.status
+					background: rgba(255,255,255,0.5)
+
+			.content
+				background: url('../images/fundo-selecoes.jpg')
+				height: 398px
+				margin-top: 20px
+				text-align: center
+				position: relative
+
+				.status
+					width: 100%
+					height: 398px
+					position: absolute
+					z-index: 9999
+					+transition(0.3s ease-out)
+					cursor: pointer
+
+				.status.active
+					background: rgba(239, 78, 99, 0.5)
+
+				.image
+					position: relative
+					margin-bottom: 15px
+
+				img
+					margin: 20px 0px
+					text-align: center 
+
+				.preco
+					position: absolute
+					background: $rosa
+					color: white
+					font-weight: 600
+					font-size: 15px
+					right: 10px
+					bottom: 0
+					padding: 10px
+					font-family: $roboto
+					+box-shadow(inset 0px -3px 2px 0 rgba(255,255,255,0.6))
+
+					span
+						font-size: 25px
+
+				p
+					font-size: 14px
+					color: #5b5b5b
+					line-height: 1.3
+					margin: 0 8px
+					strong
+						font-weight: 600
+
+				.divisao
+					height: 2px
+					width: 100%
+					background: white
+					border-bottom: 1px solid #cbcbcb
+					margin: 10px 0px
+
+
+			h2
+				color: $rosa
+				font-family: $roboto
+				font-size: 28px
+				font-weight: 300
+				span
+					font-weight: 600
+				.icon
+					float: left
+					min-height: 50px
+					width: 50px
+			
+			.garrafasRate
+				display: inline-block
+				margin: 0 auto
+
+			.garrafaIcon
+				background: url('../images/#{$mini-path}')
+				+sprite-dimensions($sprite-mini, garrafaicon)	
+				background-position: sprite-position($sprite-mini, garrafaicon)
+				float: left
+				margin: 0 1px
+
+			.garrafas 
+				p
+					color: $rosa
+					font-family: $roboto
+					font-weight: 600
+
+			.btns
+				.conheca, .associar
+					padding: 10px 20px
+					color: white
+					font-family: $roboto
+					font-weight: 600
+					display: block
+					margin: 15px
+
+				.conheca 
+					background: $cinza
+
+				.associar
+					background: $rosa
+					font-size: 20px
+					padding: 15px 20px
+
+	.formaPagamento
+		border-top: 2px solid lighten($cinza, 20%)
+		padding-top: 30px
+		margin-top: 30px
+
+		p
+			display: inline
+
+			a
+				color: $rosa
+
+		h1
+			color: $rosa
+			font-family: $roboto
+			font-size: 18px
+			font-weight: 600
+
+		.bandeiras
+			width: 430px
+			float: left
+			padding: 15px 93px
+
+			li
+				float: left
+				width: 60px !important
+				height: 37px
+				background: #d9d9d9
+				display: block
+				margin: 10px
+				cursor: pointer
+				+transition(transform, 0.8s)
+				overflow: hidden
+				+border-radius(2px)
+				
+
+				
+					
+
+				&.visa
+					background: url("../images/cartoes/visa.png")
+
+				&.master
+					background: url("../images/cartoes/master.png")
+
+				&.dinners
+					background: url("../images/cartoes/dinners.png")
+
+				&.elo
+					background: url("../images/cartoes/elo.png")
+
+				&.amex
+					background: url("../images/cartoes/amex.png")
+
+				&.active
+					+transform(scale(1.2))
+					border: 1px solid $rosa
+
+		.dadosCartao
+			float: right
+			width: 400px
+
+	#passoQuatro
+		display: none
+		h1
+			color: #3bba14
+			font-size: 31px
+			font-family: $roboto
+			font-weight: 300
+			text-align: center
+			margin: 30px 0px
+			margin-bottom: 80px
+
+		p
+			margin: 15px 0px
+			color: #58585b
+
+		.texto
+			float: left
+			width: 260px
+			margin-left: 100px
+
+		.garcom
+			width: 421px
+			height: 189px
+			background: url('../images/cadastro-garcom.png')
+			position: absolute
+			bottom: -11px
+
+		.garcom-content
+			float: right
+			width: 450px
+			position: relative
+			min-height: 300px
+
+		.gb-pisca
+			width: 243px
+			height: 244px
+			background: url('../images/cadastro-pisca.png')
+			position: absolute
+			top: -84px
+			right: 115px
+		
+		.gb
+			background: url('../images/cadastro-gb.png')
+			width: 122px
+			height: 114px
+			position: absolute
+			right: 180px
+			top: -30px
+			-webkit-animation-name: Floating
+			-webkit-animation-duration: 3s
+			-webkit-animation-iteration-count: infinite
+			-webkit-animation-timing-function: ease-in-out
+			-moz-animation-name: Floating
+			-moz-animation-duration: 3s
+			-moz-animation-iteration-count: infinite
+			-moz-animation-timing-function: ease-in-out
+		
+
+	
+		
+		    
+	
+		
+
+		.container
+			border-bottom: 2px solid $rosa

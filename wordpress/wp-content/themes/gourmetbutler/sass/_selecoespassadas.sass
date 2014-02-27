@@ -1,0 +1,117 @@
+#page-selecoesPassadas
+	h1
+		text-align: center
+		color: $rosa
+		font-size: 50px
+		font-family: $roboto
+		margin: 30px 0px
+		margin-top: 60px
+
+	h2
+		font-size: 15px
+		color: lighten($cinza,20%)
+		text-align: center
+
+	.selecoes
+		border-bottom: 3px solid lighten($cinza, 20%) 
+		height: 48px
+
+		ul
+			margin-top: 20px
+			li
+				float: left
+				padding: 15px 20px
+				font-family: $roboto
+				background: #d9d9d9
+				color: #545454
+				font-size: 15px
+				margin: 0 1px
+				border-bottom: 3px solid lighten($cinza, 20%)
+				font-weight: 600
+				cursor: pointer
+
+				&.active
+					background: white
+					color: $rosa
+
+
+	.anos
+		.container 
+			border-bottom: 2px solid $rosa
+		
+		.center
+			text-align: center
+		ul
+			display: inline-block
+			margin: 10px auto
+
+			li
+				float: left
+				padding: 10px
+				font-family: $roboto
+				font-size: 24px
+				color: lighten($cinza, 10%)
+				cursor: pointer
+
+				&.active
+					color: $rosa
+
+	.garrafas
+		.selecao
+			margin-top: 20px
+			margin-bottom: 40px
+			h3
+				color: $rosa
+				font-size: 24px
+				font-family: $roboto
+				font-weight: 600
+				margin: 15px 0px
+
+			ul
+				margin: 20px 0px
+
+
+				li
+					float: left
+					text-align: center
+					font-family: $roboto
+					font-size: 14px
+					margin: 0px 18px
+					cursor: pointer
+
+					img
+						+transition(transform, 0.5s) 
+						overflow: hidden
+
+					p
+						font-weight: 600
+						color: $cinza
+
+					&:hover
+						p
+							color: $rosa
+
+						
+
+				a:hover
+					img 
+						+transform(scale(1.1))
+
+	
+	.desejo
+		@extend .botaoAssociar
+		width: 50%
+		float: right
+		padding: 20px
+		margin: 30px 0px
+
+	.conheca
+		width: 40%
+		float: left
+		color: $rosa
+		font-size: 25px
+		font-family: $roboto
+		font-weight: 600
+		padding: 45px
+		margin-left: 20px
+

@@ -1,0 +1,309 @@
+.pag-quem
+
+	h1
+		line-height: 38px
+		font-size: 38px
+		font-weight: 300
+		font-family: $roboto
+		color: $rosa
+		margin: 40px 0px
+
+		div
+			float: left
+			margin-right: 20px
+
+	.descricao
+
+		p
+			color: #58585b
+			font-size: 16px
+			line-height: 1.3
+			margin: 15px 0px
+		ul
+			margin-left: 25px
+
+		li
+			margin: 5px 0px
+			span
+				color: $rosa
+	
+	#trabalhe
+		color: $rosa
+		margin: 5px 0px
+		cursor: pointer
+		
+
+		&:hover
+			.iconTrabalhe
+				margin-right: 20px
+		.iconTrabalhe
+			float: left
+			+transition(0.3s ease-out)
+			margin-right: 10px
+			width: 0px
+			height: 0px
+			border-style: solid
+			border-width: 7.5px 0 7.5px 10px
+			border-color: transparent transparent transparent #ef4e63
+
+		&.active
+			.iconTrabalhe
+				width: 0px
+				height: 0px
+				border-style: solid
+				border-width: 10px 7.5px 0 7.5px
+				border-color: #ef4e63 transparent transparent transparent
+
+	#form-trabalhe
+		background-color: $rosa
+		padding: 10px
+		position: relative
+		display: none
+		#close
+			background: url("../images/close-login.png")
+			position: absolute
+			width: 14px
+			height: 14px
+			right: 10px 
+			top: -20px
+			cursor: pointer
+
+		.inputs
+			float: left
+			padding: 20px
+			input
+				display: block
+				height: 30px
+				width: 200px
+				margin: 10px 0px
+
+			input[type="email"]
+				width: 300px
+
+		.fields
+			float: right
+			padding: 20px
+			width: 500px
+
+			label
+				color: white
+				font-size: 15px
+
+			input
+				display: block
+				margin: 10px 0px
+				color: white
+
+			input[type="submit"]
+				background: url("../images/seta.png") right no-repeat transparent
+				color: white
+				font-family: $roboto
+				font-weight: 700
+				font-size: 16px
+				cursor: pointer
+				width: 90px
+				padding-right: 20px
+				border: none
+				outline: none
+				+transition(ease-out 0.3s)
+				float: right
+				margin-right: 35px
+
+				&:hover
+					padding-right: 10px
+
+				&:focus
+					border: none
+					outline: none
+
+	.missao
+		.gb-container
+			float: left
+			width: 399px
+			height: 401px
+			position: relative
+
+		#gb-pisca
+			width: 399px
+			height: 401px
+			background: url('../images/gb-pisca.png')
+			position: absolute
+			top: 0
+			display: none
+			left: 0
+
+		#gb
+			background: url('../images/gb.png')
+			width: 200px
+			height: 187px
+			top: 93px
+			left: 106px
+			position: absolute
+			+transition(transform, 0.8s)
+			overflow: hidden
+			
+
+			&:hover
+				+transform(rotate(1800deg))
+
+		.content
+			padding-top: 80px
+			h2
+				color: $rosa
+				font-family: $roboto
+				font-size: 30px
+				margin-bottom: 30px
+
+			h3
+				font-size: 18px
+				line-height: 1.4
+
+	#valores
+		background: url('../images/bg-valores.jpg')
+		width: 100%
+		height: 360px
+		padding: 20px 
+
+		h2
+			color: $rosa
+			font-family: $roboto
+			font-size: 40px
+			margin: 20px 0px 30px 0px
+
+			span
+				margin-left: 20px
+				font-size: 15px
+				color: $cinza
+				font-family: $ptsans
+
+		li
+			float: left
+			margin: 20px 10px
+			display: block
+			width: 31%
+			position: relative
+			cursor: pointer
+
+			.icon
+				float: left
+				margin-right: 15px
+
+			h4
+				font-size: 21px
+				text-transform: uppercase
+				line-height: 1.3
+				color: $cinza
+				padding: 10px
+				display: block
+				float: left
+				width: 200px
+				
+
+			&:hover
+				h4
+					color: $rosa
+			
+			
+
+			&.active
+				h4
+					background-color: $rosa
+					color: white
+
+				
+					
+
+
+			.descricaoValor
+				position: absolute
+				padding: 15px
+				background-color: $rosa
+				color: white
+				z-index: 999999
+				padding-bottom: 30px
+				display: none
+				top: 46px
+
+				p
+					line-height: 1.3
+
+				.relative
+					position: relative
+
+				.close
+					position: absolute
+					height: 22px
+					width: 20px
+					color: white
+					background: url("../images/seta.png") right no-repeat transparent
+					right: 10px
+					text-align: center
+					line-height: 15px
+					+transform(rotate(-90deg))
+			
+			.descCompromisso
+				top: 73px !important
+	
+	.cinza
+		background: #e9e9e9
+		padding: 60px 0px
+		border: 3px solid #585858
+		border-left: none
+		border-right: none
+		.texto
+			float: left
+			width: 50%
+			font-size: 25px
+			color: $rosa
+			font-family: $roboto
+			line-height: 1.5
+
+		.btn 
+			width: 50%
+			float: right
+			line-height: 60px 
+
+	#mais
+		padding: 50px 0px
+		a:hover
+			li
+				border: 3px solid rgba(234,70,101,0.2)
+		li
+			float: left
+			width: 20%
+			margin: 2.5%
+			text-align: center
+			position: relative
+			background: url('../images/bg-valores.jpg')
+			padding: 20px 5px
+			height: 170px
+			border: 3px solid white
+			+transition(0.3s ease-out)
+
+			.texto
+				color: $rosa
+				font-family: $roboto
+				font-size: 20px
+				position: absolute
+				bottom: 10px
+				width: 100%
+				text-align: center
+
+			.icon
+				margin: 0 auto
+		
+			&.planos
+				.icon
+					margin-top: 25px
+
+			&.blog
+				.icon
+					margin-left: 75px
+
+	#mailing
+		margin-bottom: 0
+
+
+
+
+	

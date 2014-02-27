@@ -1,0 +1,468 @@
+#bebidasFesta
+	.banner
+		height: 450px
+		width: 100%  
+		position: relative
+		margin: 20px 0px
+		
+		.img
+			background: url("../images/bebidasfesta/banner1.jpg") center
+			width: 100%
+			height: 450px
+			position: absolute
+			top: 0
+			z-index: -9
+
+
+		h1, h3
+			background: rgba(255,255,255,0.6)
+			font-family: $roboto
+			font-size: 30px 
+			padding: 10px
+			color: darken($cinza, 10%)
+			display: inline-block 
+			max-width: 450px
+			margin: 20px 0px
+			line-height: 1.4
+
+		h3
+			font-size: 21px
+
+		h2 
+			font-family: $roboto
+			font-size: 40px
+			color: $rosa
+			margin: 10px 0px
+			max-width: 522px
+			font-weight: 600
+			line-height: 1.4
+			background: rgba(255,255,255,0.6)
+			padding: 10px
+
+
+	.como-funciona
+		margin: 40px 0px
+		.content
+			position: relative
+			border: 2px solid #d9d9d9
+			padding: 25px 15px
+		h2
+			position: absolute
+			font-family: $roboto
+			color: $rosa
+			background: white
+			padding: 5px 
+			top: -20px
+			font-size: 25px
+			left: 20px
+
+		.texto
+			float: left
+			width: 350px 
+
+			p
+				line-height: 1.4
+				color: $cinza
+
+				a
+					color: $rosa
+					font-weight: 600
+
+					&:hover
+						text-decoration: underline
+
+		.trabalhamos
+			float: right
+			width: 500px
+
+			p
+				font-family: $roboto
+				font-size: 15px
+				color: $cinza
+				margin: 10px 0px
+			
+			ul
+				margin-top: 10px
+
+			li
+				color: $cinza
+				line-height: 2.5
+				position: relative 
+				padding-left: 35px
+				float: left
+				margin: 10px
+				div
+					position: absolute
+					left: 0
+					display: inline-block
+					margin-top: 5px
+
+		.orcamento
+			@extend .botaoAssociar
+			float: left
+			padding: 10px
+			margin: 20px
+
+		.tel
+			float: right
+			font-size: 30px
+			color: #2b8dbc
+			font-weight: 600
+			margin: 20px
+			line-height: 60px
+
+			span
+				font-size: 20px
+
+	.contato, .contatoOrcamento
+
+		border: 2px solid $cinza
+		border-left: 0
+		border-right: 0
+		padding: 20px 0px
+		margin-top: 5px
+		margin-bottom: 20px
+		padding: 20px
+		display: none
+
+		h3
+			font-size: 25px
+			color: $rosa
+			font-family: $roboto
+
+		p
+			color: $cinza
+			margin: 10px 0px
+			display: block
+
+		#close
+			background: url('../images/close-indica.png')
+			width: 35px
+			height: 24px
+			position: absolute
+			right: 0
+			cursor: pointer
+			+transition(0.3s ease-out)
+			top: 10px
+			&:hover
+				top: 5px
+
+		h2
+			font-family: $roboto
+			font-weight: 300
+			color: $cinza
+			font-size: 22px
+			margin-bottom: 10px
+
+		.left
+			float: left
+			width: 280px
+
+			input
+				width: 260px
+				margin: 5px
+				font-size: 16px
+				margin-left: 0
+				height: 30px
+				border: 2px solid #a6a6a6
+
+				&:focus
+					outline: none
+		.right
+			float: left
+			width: 543px
+			input
+				width: 260px
+				margin: 5px
+				margin-left: 0
+				font-size: 15px
+				height: 30px
+				border: 2px solid #a6a6a6
+
+				&:focus
+					outline: none
+
+			textarea
+				width: 340px
+				height: 160px
+				border: 2px solid #a6a6a6
+				resize: none
+				margin-top: 5px
+				float: left
+				font-size: 15px 
+				&:focus
+					outline: none
+
+
+			input[type="submit"]
+				+box-shadow(inset 0 1px 2px 0 rgba(0,0,0,0.3), inset 0px -1px 2px 0 rgba(255,255,255,0.6))
+				background: $cinza
+				padding: 0px 20px
+				width: 155px
+				height: 40px
+				color: white
+				font-size: 20px
+				text-align: center
+				border: none
+				font-weight: 600
+				float: right
+				margin-top: 125px
+				margin-left: 5px
+				+transition(0.3s ease-out)
+				cursor: pointer
+				text-transform: uppercase
+				&:hover
+					background: darken($cinza, 10%)
+
+	.contatoOrcamento
+		border-top: 0
+
+	.beneficios
+		ul
+			display: block
+
+		li
+			float: left
+			width: 20%
+			margin: 2.5%
+
+			h3
+				color: $rosa
+				font-size: 22px
+				font-family: $roboto
+				font-weight: 600
+				margin: 10px 0px
+
+			p
+				color: $cinza
+
+			.icon
+				background: url("../images/bebidasfesta/beneficios.jpg")
+				width: 180px
+				height: 171px  
+
+	.sweet
+		height: 310px
+		border-top: 3px solid $cinza
+		width: 100%
+		background: url('../images/fundo-garcom.jpg')
+		margin: 50px 0px
+		padding-top: 30px
+		img
+			float: left
+			margin: 30px 0px
+			margin-right: 200px
+
+		h3
+			font-size: 50px
+			font-weight: 600
+			font-family: $roboto
+			color: $rosa
+			margin: 20px 10px
+			text-align: right
+
+		p
+			text-align: right
+			color: $rosa
+			font-family: $roboto
+			font-size: 14px
+			line-height: 1.4
+			display: block
+
+	aside
+		float: right
+		width: 280px
+		.sabermais
+			p
+				font-family: $roboto
+				font-size: 20px
+				margin: 10px 0
+				color: $rosa
+			input[type="email"]
+				width: 200px
+				float: left
+				height: 50px
+				display: block
+				background: white
+				border: 2px solid $cinza
+				font-size: 15px
+				font-family: $roboto
+				padding-left: 5px 
+				border-right: none
+				
+
+				&:focus
+					outline: none
+					border: 2px solid $rosa
+					border-right: 2px solid $cinza
+
+			input[type="submit"]
+				width: 30px
+				height: 50px
+				display: block
+				border: none
+				color: white
+				font-weight: 600
+				font-family: $roboto
+				font-size: 30px
+				line-height: 20px
+				margin: 10px 0px
+				background: url('../images/submit-seta.png') no-repeat $cinza 7px 12px
+				+transition(0.3s ease-out)
+				cursor: pointer
+				&:focus
+					outline: none
+
+				&:hover
+					background-color: $rosa
+	.clientes
+		border: 2px solid #d9d9d9
+		position: relative
+		padding: 20px
+		float: left
+		width: 650px
+		h2
+			top: -23px
+			padding: 5px
+			position: absolute
+			background: white
+			color: $rosa
+			font-family: $roboto
+			font-size: 30px
+			font-weight: 300
+
+		.divisao
+			height: 2px
+			border-bottom: 1px solid #bfbfbf
+			background: darken(#bfbfbf,10%)
+			margin: 35px 0px
+
+		.depoimento
+			.texto
+				float: right
+				width: 400px
+				p
+					font-size: 14px
+					color: $cinza
+					line-height: 1.4
+
+				.data
+					font-weight: 600
+					color: $cinza
+					margin: 10px 0px
+					display: block
+
+			.foto
+				float: left
+				width: 180px
+				position: relative
+
+				div
+					position: absolute
+
+				.estrelas
+					right: 15px
+
+				.tacaIcon
+					bottom: 0
+					left: -12px
+
+				.nome
+					background: $rosa
+					padding: 5px
+					color: white
+					bottom: 0
+					right: 0px
+
+
+		.depoimento-right
+			.texto
+				float: left
+
+			.foto
+				float: right
+				text-align: right
+
+				.estrelas
+					left: 15px
+
+				.tacaIcon
+					left: auto
+					right: -12px
+
+				.nome
+					right: auto
+					left: 0px
+		.tacaIcon
+			background: url('../images/#{$mini-path}')
+			+sprite-dimensions($sprite-mini, tacaIcon)	
+			background-position: sprite-position($sprite-mini, tacaIcon)
+		
+
+		.estrelas
+			background: url('../images/#{$mini-path}')
+			+sprite-dimensions($sprite-mini, estrelas)	
+			background-position: sprite-position($sprite-mini, estrelas)
+
+	.associe
+		background: #d9d9d9
+		padding: 60px 0px
+		color: $rosa
+		margin-top: 60px
+		border-top: 3px solid $cinza
+		border-bottom: 3px solid $cinza
+		h3
+			float: left
+			width: 450px
+			font-size: 35px
+			font-family: $roboto
+
+		a
+			@extend .botaoAssociar
+			float: right
+			padding: 15px 30px
+			margin: 20px 
+
+	.sobre
+		.container
+			padding-top: 60px
+		.content
+			position: relative
+			border: 2px solid #d9d9d9
+			padding: 25px 15px
+		h2
+			position: absolute
+			font-family: $roboto
+			color: $rosa
+			background: white
+			padding: 5px 
+			top: -20px
+			font-size: 25px
+			left: 20px
+
+		img
+			float: left
+			margin: 30px
+
+		p
+			color: $cinza
+			line-height: 1.4
+			margin: 20px
+			display: block
+			margin-left: 50px
+
+		.sobreButton 
+			background: $rosa 
+			color: white
+			font-family: $roboto
+			font-size: 14px
+			padding: 15px
+			display: block
+			text-align: center
+			margin: 20px 310px
+			+transition(0.3s ease-out)
+			font-weight: 600
+
+			&:hover
+				background: darken($rosa,10%)
+

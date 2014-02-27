@@ -1,0 +1,118 @@
+#contato
+	padding-top: 40px
+	h2
+		font-size: 30px
+		color: $rosa
+		font-family: $roboto
+		font-weight: 300
+
+	.contatos
+		li
+			float: left
+			height: 165px
+			width: 180px
+			color: white
+			font-family: $roboto
+			div
+				margin: 40px auto
+		li:nth-of-type(odd)
+			background: url('../images/fundo-selecoes.jpg') 0px -70px 
+
+		li:nth-of-type(even)
+			background: $rosa
+
+		#contatoMsg
+			margin-top: 60px
+
+		.tel
+			font-weight: 600
+			text-align: center
+			font-size: 13px
+			margin: 35px 0px
+
+			span
+				font-size: 25px
+		.servico 
+			font-size: 13px
+			text-align: center
+			width: 180px
+			display: block
+
+		.url
+			font-size: 18px
+			font-weight: 600
+			text-align: center
+			line-height: 160px
+
+	h2.fale
+		margin: 45px 20px
+
+	label
+		display: block
+		font-size: 17px
+		color: $cinza
+		font-family: $roboto
+		float: left
+		margin: 10px 343px 10px 0px
+
+
+	.inputs
+		input
+			width: 40% 
+			margin-right: 10px
+			height: 40px
+			padding: 0
+			border: 2px solid lighten($cinza,30%)
+			font-family: $roboto
+			font-size: 16px
+
+			&:focus
+				outline: none
+
+			&.error
+				border: 2px solid #FF9090
+			&.valid
+				border: 2px solid #7FB46A
+	
+	.mensagem
+		position: relative
+
+
+
+	textarea
+		width: 81%
+		border: 2px solid lighten($cinza,30%)
+		height: 150px
+		margin: 10px 0px
+		resize: none
+		font-family: $roboto
+		font-size: 16px
+
+		&:focus
+			outline: none
+
+		&.error
+			border: 2px solid #FF9090
+		&.valid
+			border: 2px solid #7FB46A
+
+	input[type="submit"]
+		background: $cinza
+		color: white
+		border: none
+		float right
+		height: 40px
+		width: 18%
+		right: 0
+		margin-bottom: 10px
+		position: absolute
+		bottom: 3px
+		font-family: $roboto
+		font-size: 20px
+		+transition(0.3s ease-out)
+		cursor: pointer
+		&:hover
+			background: lighten($cinza, 20%)
+
+		
+

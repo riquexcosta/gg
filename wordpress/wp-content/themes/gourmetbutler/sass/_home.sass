@@ -1,0 +1,548 @@
+#home
+	h1
+		font-size: 50px 
+		font-family: $roboto
+		text-align: center
+		color: $rosa
+		margin: 60px 0px
+
+	.banner
+		width: 100%
+		position: relative		
+		height: 592px
+
+		.banner-img
+			background: url("../images/banner1.jpg") center 
+			width: 100%
+			height: 592px
+			position: absolute
+			top: 0
+			z-index: -2
+
+		.container
+			height: 592px 
+
+		.banner-slide
+			display: none
+
+		#banner1
+			display: none
+
+			#selecionado3, #selecionado2, #selecionado1
+				position: absolute
+				display: none
+
+			#selecionado1
+				top: 271px
+				left: -58px
+
+			#selecionado3
+				left: 75px
+				top: 361px
+
+			#selecionado2
+				left: 60px
+				top: 182px
+
+		#banner2
+			#pocketg, #royalg, #premiumg
+				position: absolute
+				display: none
+
+			#pocketg
+				left: 330px
+				bottom: 20px
+
+			#royalg
+				top: 300px
+				left: 20px
+
+			#premiumg
+				top: 75px
+				left: 280px
+
+		#banner3
+			.vinho-1
+				background: url('../images/garrafaBanner.png')
+				position: absolute
+				width: 540px
+				height: 428px
+				top: 0px
+				left: -113px
+				z-index: -1
+
+
+
+
+		.caixa
+			background: rgba(255,255,255,0.9)
+			width: 530px
+			padding: 20px
+			color: #333
+			position: absolute
+			bottom: 30px
+			left: 15px
+
+			.titulo 
+				font-weight: 600
+				margin-bottom: 15px
+				font-family: $roboto
+				font-size: 20px
+
+			p
+				line-height: 20px
+				font-size: 18px
+
+		.tabs
+			li
+				float: left
+				padding: 15px
+				display: block
+				background: rgba(255,255,255,0.85)
+				font-family: $roboto
+				font-weight: 600
+
+				a
+					color: lighten($cinza, 20%)
+				&.active
+					background: $rosa 
+					a
+						color: white
+
+		.banner-caixa
+			position: absolute
+			width: 360px
+			height: 580px
+			background: rgba(255,255,255,0.9)
+			right: 0
+			top: 6px
+			padding: 20px
+
+			#selogb
+				float: left
+
+			h2
+				font-size: 30px
+				font-family: $roboto
+				float: right
+				width: 175px
+				color: #333
+				margin: 40px 0px 10px
+				font-weight: 300
+
+			span
+				font-size: 14px
+				color: #333
+				text-align: center
+				margin: 15px 8px
+				display: block
+				line-height: 17px
+
+			.quero-associar
+				@extend .botaoAssociar				
+				padding: 15px 10px
+				line-height: 30px
+								
+
+			.quero-saber
+				background: $rosa
+				color: white
+				font-family: $roboto
+				font-size: 21px
+				text-align: center
+				border: 1px solid #333
+				padding: 15px 10px
+				text-align: center
+				font-weight: 600
+				margin: 20px 40px
+				display: block
+				+box-shadow(inset 0 1px 2px 0 rgba(0,0,0,0.3), inset 0px -1px 2px 0 rgba(255,255,255,0.6))
+				+transition(0.3s ease-out)
+				&:hover
+					background: darken($rosa,5%)
+					color: darken($rosa,30%)
+
+			.divisao
+				height: 2px
+				width: 100%
+				background: white
+				border-bottom: 1px solid #cbcbcb
+				margin-bottom: 35px
+
+			h3
+				float: right
+				width: 200px
+				font-family: $roboto
+				font-size: 25px
+				color: #333
+				margin: 15px 0px
+				font-weight: 300
+
+			#aviao
+				float: left
+				margin: 15px 0px
+
+			.indique
+				background: $cinza
+				padding: 5px 10px
+				color: white
+				font-family: $roboto
+				font-size: 20px
+				font-weight: 600
+				display: block
+				width: 105px
+				border: 1px solid $cinza
+				+transition(0.3s ease-out)
+				&:hover
+					background: transparent
+					color: $cinza
+
+
+	#indique-amigo
+		border-bottom: 3px solid #a6a6a6
+		border-top: 3px solid #a6a6a6
+		margin-top: 5px
+		margin-bottom: 20px
+		padding: 20px
+		display: none
+
+		#close
+			background: url('../images/close-indica.png')
+			width: 35px
+			height: 24px
+			position: absolute
+			right: 0
+			cursor: pointer
+			+transition(0.3s ease-out)
+			top: 10px
+			&:hover
+				top: 5px
+
+		h2
+			font-family: $roboto
+			font-weight: 300
+			color: $cinza
+			font-size: 22px
+			margin-bottom: 10px
+
+		.inputs
+			float: left
+			width: 415px
+
+			input
+				width: 200px
+				margin: 5px
+				margin-left: 0
+				height: 30px
+				border: 2px solid #a6a6a6
+
+				&:focus
+					outline: none
+		.textarea
+			float: right
+			width: 543px
+			textarea
+				width: 340px
+				height: 160px
+				border: 2px solid #a6a6a6
+				resize: none
+				margin-top: 5px
+				float: left
+				&:focus
+					outline: none
+
+
+			input[type="submit"]
+				+box-shadow(inset 0 1px 2px 0 rgba(0,0,0,0.3), inset 0px -1px 2px 0 rgba(255,255,255,0.6))
+				background: #d7c41f
+				padding: 0px 20px
+				width: 195px
+				height: 40px
+				color: white
+				font-size: 30px
+				text-align: center
+				border: none
+				font-weight: 600
+				float: right
+				margin-top: 125px
+				margin-left: 5px
+				+transition(0.3s ease-out)
+				cursor: pointer
+				&:hover
+					background: darken(#d7c41f, 10%)
+
+	#unico
+		padding: 25px 0px
+		h2
+			font-size: 33px
+			color: $rosa
+			font-weight: 300
+			font-family: $roboto
+			line-height: 55px
+			margin-bottom: 30px
+
+			#tacavirada
+				float: left
+				margin-right: 10px
+
+		li
+			float: left
+			width: 25%
+			padding: 5px 30px
+			.icon
+				margin: 10px auto
+				min-height: 150px
+				div
+					margin: 0 auto
+			h4
+				font-size: 25px
+				font-weight: 600
+				color: $cinza
+				font-family: $roboto
+				margin: 15px 0px
+
+			p
+				font-size: 14px
+				color: #58585b
+				line-height: 1.3
+
+			a
+				color: $rosa
+				font-weight: 600
+				+transition(0.3s ease-out)
+				&:hover
+					color: $cinza
+
+		.tornar-associado
+			@extend .botaoAssociar
+			line-height: 50px
+			margin: 20px 200px
+
+	#butler
+		background: url('../images/fundo-garcom.jpg')
+		height: 315px
+		overflow: hidden
+		margin: 50px 0px
+
+
+		.container
+			height: 315px
+
+		#grande-butler
+			background: url('../images/garcom.png')
+			width: 720px
+			height: 520px
+			position: absolute
+			top: -60px
+			left: -50px
+
+		h2
+			color: $rosa
+			font-size: 60px
+			font-family: $roboto
+			font-weight: 300
+			position: absolute
+			top: 80px
+			left: 66px
+
+			span
+				font-weight: 600
+				margin: 0 20px 
+		
+		p
+			color: $rosa
+			font-family: $roboto
+			font-size: 15px
+			width: 400px
+			line-height: 1.3
+			position: absolute
+			right: 10px
+			bottom: 20px
+			text-align: right
+
+	
+	.cinza
+		background: #d9d9d9
+
+	.branca
+		background: white
+
+	
+	.clientes
+		border: 2px solid #d9d9d9
+		position: relative
+		padding: 20px
+		h2
+			top: -23px
+			padding: 5px
+			position: absolute
+			background: white
+			color: $rosa
+			font-family: $roboto
+			font-size: 30px
+			font-weight: 300
+
+		.divisao
+			height: 2px
+			border-bottom: 1px solid #bfbfbf
+			background: darken(#bfbfbf,10%)
+			margin: 35px 0px
+
+		.depoimento
+			.texto
+				float: right
+				width: 720px
+				p
+					font-size: 14px
+					color: $cinza
+					line-height: 1.4
+
+				.data
+					font-weight: 600
+					color: $cinza
+					margin: 10px 0px
+					display: block
+
+			.foto
+				float: left
+				width: 180px
+				position: relative
+
+				div
+					position: absolute
+
+				.estrelas
+					right: 15px
+
+				.tacaIcon
+					bottom: 0
+					left: -12px
+
+				.nome
+					background: $rosa
+					padding: 5px
+					color: white
+					bottom: 0
+					right: 0px
+
+
+		.depoimento-right
+			.texto
+				float: left
+
+			.foto
+				float: right
+				text-align: right
+
+				.estrelas
+					left: 15px
+
+				.tacaIcon
+					left: auto
+					right: -12px
+
+				.nome
+					right: auto
+					left: 0px
+		.tacaIcon
+			background: url('../images/#{$mini-path}')
+			+sprite-dimensions($sprite-mini, tacaIcon)	
+			background-position: sprite-position($sprite-mini, tacaIcon)
+		
+
+		.estrelas
+			background: url('../images/#{$mini-path}')
+			+sprite-dimensions($sprite-mini, estrelas)	
+			background-position: sprite-position($sprite-mini, estrelas)
+
+	.tornar-associado
+		@extend .botaoAssociar
+		line-height: 50px
+		margin: 20px 190px
+
+	.ultimos-posts
+		border: 2px solid #d9d9d9
+		position: relative
+		padding: 20px
+		float: left
+		width: 660px
+		margin: 20px 0px
+		h2
+			top: -23px
+			padding: 5px
+			position: absolute
+			background: white
+			color: $rosa
+			font-family: $roboto
+			font-size: 30px
+			font-weight: 300
+
+		.post
+			border-bottom: 2px solid #d9d9d9
+			padding: 15px 0px
+
+			h3
+				font-family: $roboto
+				color: $rosa
+				text-transform: uppercase
+				font-size: 19px
+
+			img
+				margin: 10px 0px
+				float: left
+				margin-right: 10px
+
+			p
+				margin-top: 10px
+				color: $cinza
+				font-size: 14px
+				line-height: 1.4
+
+			a.continuar
+				background: $cinza
+				color: white
+				padding: 10px
+				display: block
+				width: 200px
+				text-align: center
+				float: right
+				border: 1px solid $cinza
+				+transition(0.3s ease-out)
+
+				&:hover
+					background: transparent
+					color: $cinza
+
+			&:last-of-type
+				border-bottom: none 
+
+	aside
+		float: right
+		width: 270px
+		padding-top: 20px
+
+		.display
+			text-align: center
+			img
+				border: 1px solid $rosa
+
+		.facebook
+			height: 270px
+			width: 260px
+			
+			margin: 0 auto
+			margin-top: 20px
+
+	
+
+	
+
+
+
+
+		
+
+
+
+
+

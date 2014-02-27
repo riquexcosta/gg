@@ -1,0 +1,557 @@
+$roboto: 'Roboto Slab', serif
+$ptsans: 'PT Sans', sans-serif
+$rosa: #ef4e63
+$cinza: #595959
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
++keyframes(Floating)
+	from 
+		+transform(translate(0, 0px))
+	65% 
+		+transform(translate(0, 15px))
+	to 
+		+transform(translate(0, -0px))
+		
+*
+	+box-sizing(border-box)
+
+@import "compass"
+
+$sprite-pequeno: sprite-map("sprite-pequeno/*.png")
+$pequeno-path: sprite-path($sprite-pequeno)
+
+.teste2
+	background: $sprite-pequeno
+
+@each $pequeno in sprite_names($sprite-pequeno) 
+	##{$pequeno}
+		background: url('../images/#{$pequeno-path}')
+		+sprite-dimensions($sprite-pequeno, $pequeno)	
+		background-position: sprite-position($sprite-pequeno, $pequeno) 
+
+$sprite-mini: sprite-map("sprite-mini/*.png")
+$mini-path: sprite-path($sprite-mini)
+
+.teste
+	background: $sprite-mini
+
+@each $mini in sprite_names($sprite-mini) 
+	##{$mini}
+		background: url('../images/#{$mini-path}')
+		+sprite-dimensions($sprite-mini, $mini)	
+		background-position: sprite-position($sprite-mini, $mini) 
+
+// Padrões
+
+.botaoAssociar
+	+border-radius(15px)
+	background: #2b8dbc 
+	color: white
+	font-size: 28px
+	font-weight: 600
+	font-family: $roboto
+	display: block
+	text-align: center
+	+box-shadow(inset 0 1px 2px 0 rgba(0,0,0,0.4), inset 0px -1px 2px 0 rgba(255,255,255,0.9))
+	+transition(0.3s ease-out)
+	border: 6px solid rgba(203,203,203,1)
+	&:hover
+		background: darken(#2b8dbc, 5%)
+		color: darken(#2b8dbc, 20%)
+//
+
+
+.relative
+	position: relative
+
+.clear
+	clear: both
+
+.container
+	width: 960px
+	margin: 0 auto
+	display: block
+	position: relative
+
+body
+	font-family: $ptsans
+
+a
+	text-decoration: none
+	color: $cinza
+	img
+		border: none
+
+header
+	background: url('../images/bg-header.jpg') 
+	font-family: $roboto
+	height: 100px
+	line-height: 100px
+	img
+		float: left
+		margin: 36px 30px
+	nav
+		float: right
+		margin: 0 20px
+		li
+			float: left
+			font-size: 14px
+			margin: 0px 7px
+			position: relative
+
+			ul
+				background: rgba(0,0,0,0.95)
+				position: absolute
+				width: 180px
+				top: 48px
+				left: -20px
+				margin-top: 30px
+				display: none
+				z-index: 999999
+
+
+				.triangle
+					width: 0 
+					height: 0
+					border-left: 30px solid transparent
+					border-right: 30px solid transparent
+					border-bottom: 30px solid black
+					position: absolute
+					top: -12px
+					left: 50px
+
+				li
+					display: block
+					line-height: 50px
+
+			&:hover
+				ul
+					display: block
+	a
+		color: white
+		text-decoration: none
+		display: block
+
+		&:hover
+			color: $rosa
+
+*
+	+box-sizing(border-box) 
+
+.subHeader
+	.associar
+		background: $rosa
+		padding: 15px 30px
+		font-family: $roboto
+		float: left
+		color: white
+		font-weight: 600
+		font-size: 20px
+		text-decoration: none
+		+transition(0.3s ease-out)
+
+		&:hover
+			background: $cinza
+
+	.entrar
+		text-decoration: none
+		float: left
+		div
+			font-family: $roboto
+			font-weight: 300
+			color: $cinza
+			line-height: 26px
+			margin: 0px 20px
+
+			&.bold
+				font-weight: 700
+
+		&:hover
+			.bold
+				color: $rosa
+
+		
+
+	#login
+		background: $rosa
+		position: absolute
+		width: 470px
+		height: 60px
+		left: 250px
+		top: 30px
+		padding: 10px
+		display: none
+
+		input
+			background: white
+			border: #ccc
+			height: 40px
+			width: 150px
+
+			&:focus
+				outline: none
+
+		input[type="submit"]
+			background: url("../images/seta.png") right no-repeat transparent
+			color: white
+			font-family: $roboto
+			font-weight: 700
+			font-size: 16px
+			cursor: pointer
+			width: 90px
+			padding-right: 20px
+			+transition(ease-out 0.3s)
+
+			&:hover
+				padding-right: 10px
+
+			&:focus
+				border: none
+				outline: none
+
+		.esqueci
+			color: white
+			font-size: 12px
+			text-decoration: none
+			position: absolute
+			bottom: 0
+			display: block
+			right: 22px
+
+			&:hover
+				text-decoration: underline
+
+		.close-login
+			background: url("../images/close-login.png")
+			position: absolute
+			width: 14px
+			height: 14px
+			right: -27px
+			top: -10px
+			cursor: pointer
+
+	.right
+		float: right
+		a
+			display: block
+			float: left
+			width: 31px
+			height: 50px
+			margin: 0 10px
+
+			&:hover
+				background-color: $rosa
+
+		.chat
+			background: url("../images/chat.png") no-repeat center #595959
+
+		.instagram
+			background: url("../images/instagram.png") no-repeat center #595959
+
+		.face
+			background: url("../images/face.png") no-repeat center #595959
+
+		.chat-texto
+			text-decoration: none
+			line-height: 50px
+			color: $cinza
+			font-family: $roboto
+			font-size: 20px
+			width: 50px
+
+			&:hover
+				background-color: white
+				color: $rosa
+
+footer
+	background: black
+	padding: 20px 0px 10px 0px
+
+	.colunaEsq
+		float: left
+		width: 290px
+
+		.icon
+			background: $rosa
+			display: block
+			float: right
+			margin: 0 5px
+			+transition(0.3s ease-out)
+
+			&:hover
+				background: $cinza
+
+		#chat
+			margin-right: 25px
+
+	
+
+
+	.colunaMeio
+		float: left
+		width: 420px
+		padding: 0px 20px
+
+		ul
+			float: left
+			width: 45%
+			font-family: $roboto
+			font-weight: 300
+			font-size: 14px
+		
+		li 
+			margin: 10px 0px
+			a
+				color: white
+
+				&:hover
+					font-weight: 600
+				
+
+	.colunaDir
+		float: right
+		width: 240px
+
+		h4
+			color: white
+			font-family: $roboto
+			font-size: 15px
+			font-weight: 300
+			text-align: center
+			margin-bottom: 10px
+
+		.certificados
+			img
+				float: left
+				margin: 10px
+				background: white
+				width: 100px
+				height: 50px
+
+	.agencia
+		text-align: center
+		color: white
+		font-family: $roboto
+		display: block
+		margin: 10px 0px
+		+transition(0.3s ease-out)
+		padding: 10px
+
+		&:hover
+			background: $cinza
+
+#midia
+	margin-top: 40px
+	border-top: 3px solid #d9d9d9
+	padding: 40px
+	#iconMidia
+		float: left
+		margin-right: 10px
+		margin-top: 4px
+
+	h2
+		font-family: $roboto
+		color: $rosa
+		font-size: 30px
+		font-weight: 300
+
+	.jcarousel-wrapper
+		position: relative
+		margin: 20px 0px 
+
+	.jcarousel
+		position: relative
+		overflow: hidden
+		width: 900px
+		margin: 0 auto
+
+		ul
+			width: 20000em
+			position: relative
+			list-style: none
+			margin: 0
+			display: block
+			padding: 0
+
+		li
+			float: left
+			margin: 0 4px
+
+	.jcarousel-control-prev, .jcarousel-control-next
+		height: 38px
+		width: 26px
+		display: block
+		position: absolute
+		top: 20px
+
+	.jcarousel-control-prev
+		background: url('../images/back.png')
+		left: 0
+
+
+	.jcarousel-control-next
+		background: url('../images/next.png')
+		right: 0
+
+#mailing
+	+box-shadow(inset 0 -1px 2px 0 rgba(0,0,0,0.3), inset 0px 1px 2px 0 rgba(255,255,255,0.6))
+	padding: 20px 0px
+	margin: 20px 0px 70px 0px
+	p
+		float: left
+		width: 50%
+		padding: 20px
+		font-size: 25px
+		color: $cinza
+		font-family: $roboto
+		line-height: 1.3
+
+		strong
+			font-weight: 600
+
+	form
+		float: right
+		width: 50%
+		padding-top: 20px
+		input[type="email"]
+			width: 80%
+			margin-left: 20%
+			height: 45px
+			border: 2px solid $cinza
+		input[type="submit"]
+			padding: 10px 20px
+			background: $cinza
+			color: white
+			border: none
+			font-family: $roboto
+			font-size: 20px
+			margin-top: 10px
+			margin-left: 20%
+			cursor: pointer
+
+
+#selecoes
+	padding: 20px 0px
+	li
+		width: 33%
+		padding: 5px 10px
+		float: left
+
+		.content
+			background: url('../images/fundo-selecoes.jpg')
+			height: 530px
+			margin-top: 20px
+			text-align: center
+
+			.image
+				position: relative
+				margin-bottom: 15px
+
+			img
+				margin: 20px 0px
+				text-align: center
+
+			.preco
+				position: absolute
+				background: $rosa
+				color: white
+				font-weight: 600
+				font-size: 15px
+				right: 10px
+				bottom: 0
+				padding: 10px
+				font-family: $roboto
+				+box-shadow(inset 0px -3px 2px 0 rgba(255,255,255,0.6))
+
+				span
+					font-size: 25px
+
+			p
+				font-size: 16px
+				color: #5b5b5b
+				line-height: 1.3
+				strong
+					font-weight: 600
+
+			.divisao
+				height: 2px
+				width: 100%
+				background: white
+				border-bottom: 1px solid #cbcbcb
+				margin: 10px 0px
+
+
+		h2
+			color: $rosa
+			font-family: $roboto
+			font-size: 28px
+			font-weight: 300
+			span
+				font-weight: 600
+			.icon
+				float: left
+				min-height: 50px
+				width: 50px
+		
+		.garrafasRate
+			display: inline-block
+			margin: 0 auto
+
+		.garrafaIcon
+			background: url('../images/#{$mini-path}')
+			+sprite-dimensions($sprite-mini, garrafaicon)	
+			background-position: sprite-position($sprite-mini, garrafaicon)
+			float: left
+			margin: 0 1px
+
+		.garrafas 
+			p
+				color: $rosa
+				font-family: $roboto
+				font-weight: 600
+
+		.btns
+			.conheca, .associar
+				padding: 10px 20px
+				color: white
+				font-family: $roboto
+				font-weight: 600
+				display: block
+				margin: 15px
+
+			.conheca 
+				background: $cinza
+
+			.associar
+				background: $rosa
+				font-size: 20px
+				padding: 15px 20px
+
+#pag-geral
+	.container
+		min-height: 470px
+	h1
+		font-size: 50px
+		color: $rosa
+		font-family: $roboto
+		text-align: center
+		background: white 
+		padding: 5px
+		z-index: 9999
+		margin: 60px 0px
+
+	p
+		font-size: 17px
+		color: $cinza
+		margin: 10px 0px
+			
+
+
